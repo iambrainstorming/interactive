@@ -1,4 +1,5 @@
 // use crate::components::counter_btn::Button;
+use crate::components::navigation::nav::Nav;
 use leptos::prelude::*;
 
 /// Default Home Page
@@ -23,7 +24,7 @@ pub fn Home() -> impl IntoView {
                 </ul>
             }
         }>
-
+            <Nav/>
             <div class="container">
 
                 <h1>"Welcome to Interactive Learning"</h1>
