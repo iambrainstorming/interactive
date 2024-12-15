@@ -45,6 +45,7 @@ pub fn Mcq(data: McqData) -> impl IntoView {
                                                             set_show_result(true);
                                                         }
                                                     >
+
                                                         {option.clone()}
 
                                                     </button>

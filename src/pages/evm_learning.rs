@@ -80,12 +80,48 @@ pub fn EvmLearning() -> impl IntoView {
         context: r#"Paper ballots allow for tangible evidence of manipulation, such as improper handling or ballot tampering, which can be documented through smartphone cameras, CCTV surveillance, or by physical inspection. This enables voters or observers to raise concerns and potentially call for a re-election. In contrast, EVMs operate digitally, and any manipulation within them typically involves hardware or software alterations inside the machine itself. This internal manipulation is not observable through external monitoring, making it much harder to detect and address potential fraud. Therefore, while both systems have vulnerabilities, paper ballots offer a transparent mechanism for identifying and addressing irregularities."#.to_string(),
     };
 
-    let question_data = McqData {
-        question: "".to_string(),
-        correct_answer: "".to_string(),
-        options: vec!["".to_string(), "".to_string(), "".to_string()],
-        context: r#""#.to_string(),
+    let anonymity_votes = McqData {
+        question: "Why is the anonymity of voters essential in an election?".to_string(),
+        correct_answer: "To prevent coercion and undue influence on voters. Maintaining voter anonymity ensures that no one can trace an individual's vote. This eliminates the possibility of anyone forcing, threatening, or bribing voters to cast their vote in a particular way. It upholds the principle of free choice.".to_string(),
+        options: vec!["To encourage higher voter turnout. Knowing their votes are private can encourage more people to participate in elections.".to_string(), " To ensure unbiased election results. Voter anonymity prevents external influences from affecting the authenticity of the results, as individuals vote based on their own preferences rather than under duress.".to_string(), "To simplify the vote-counting process. Ensuring voter anonymity avoids linking votes to individuals, which could otherwise complicate the logistics of vote counting and raise questions about procedural fairness.".to_string()],
+        context: r#"The secret ballot, is a voting method in which a voter's identity in an election or a referendum is anonymous. This forestalls attempts to influence the voter by intimidation, blackmailing, and potential vote buying. This system is one means of achieving the goal of political privacy."#.to_string(),
     };
+
+    let anonymity_votes_evm = McqData {
+            question: "Is the anonymity of voters using Electronic Voting Machines (EVMs) questionable?".to_string(),
+            correct_answer: "EVMs might store the sequence of votes cast, which could potentially be linked to individual voters.".to_string(),
+            options: vec![
+                "Votes are anonymous with EVMs, so no concerns should arise".to_string(),
+                "EVMs do not store any data, only the final result".to_string(),
+                "Manual voting methods face the same issues as EVMs".to_string(),
+            ],
+            context: r#"Electronic Voting Machines (EVMs) are proprietary systems, and their inner workings are not fully transparent to the public. This lack of transparency raises concerns about how data is stored in EVMs (both Control Unit and VVPAT). Specifically, there is uncertainty over whether the EVM records only the total number of votes for each party or if it retains the sequence of votes cast. If EVMs store the order in which votes are cast, this sequence could be cross-referenced with the order of voters recorded at polling stations, compromising the secrecy of the vote. This is a significant concern, as it undermines the principle of anonymous voting."#
+                .to_string(),
+        };
+    let one_time_programmable_memory = McqData {
+            question: "What is One-Time Programmable (OTP) memory?".to_string(),
+            correct_answer: "A special type of non-volatile memory (NVM) that permits data to be written only once".to_string(),
+            options: vec![
+                "A type of memory that allows data to be written and erased multiple times".to_string(),
+                "A temporary memory used for short-term data storage".to_string(),
+                "A memory type that automatically deletes data after power loss".to_string(),
+            ],
+            context: r#"OTP (one time programmable) memory is a special type of non-volatile memory (NVM) that permits data to be written to memory only once. Once the memory has been programmed, it retains its value upon loss of power (i.e., is non-volatile).  Once programmed, the data cannot be altered or erased. OTP memory is used in applications where reliable and repeatable reading of data is required."#
+                .to_string(),
+        };
+
+    let one_time_progammable_evm = McqData {
+            question: "Is the memory used in Electronic Voting Machines (EVMs) one-time programmable (OTP)?".to_string(),
+            correct_answer: "EVMs use volatile memory to store votes temporarily during operation. This design choice ensures reusability but raises concerns about vulnerability to tampering or memory manipulation.".to_string(),
+            options: vec![
+                "EVMs use OTP memory to ensure complete security of votes".to_string(),
+                "EVMs use OTP memory but reset it before each election".to_string(),
+                "No, EVMs rely on encrypted permanent memory for storing votes".to_string(),
+            ],
+            context: r#"EVMs are reused multiple times in elections, and the votes are stored in volatile memory rather than OTP memory. This makes the memory potentially vulnerable to manipulation or tampering. Additionally, there is limited transparency about the origins of the microcontrollers used in EVMs. Information regarding their manufacture is not disclosed, even under the Right to Information (RTI) Act. The companies Bharat Electronics Limited (BEL) and Electronics Corporation of India Limited (ECIL) only assemble these devices.<br/> <br/> BEL had shared this information under RTI in May 2019. The microchips from our EVMs are supplied by NXP. But the more crucial RTI revelation was this, while the [Election Commission has always claimed that the EVM microchip is one-time programmable only](https://www.youtube.com/watch?v=LDrhK7TIdDo), experts went on to the NXP website and found that its microchips have FLASH memory which are not just one time programmable. Meaning, if accessed, then can be re-programmed opening the EVM to manipulation."#
+                .to_string(),
+        };
+
     view! {
         <div>
             <Nav/>
@@ -108,6 +144,14 @@ pub fn EvmLearning() -> impl IntoView {
                 <Mcq data=how_many_evm_manipulation_required/>
 
                 <Mcq data=paper_ballot_more_secure/>
+
+                <Mcq data=anonymity_votes/>
+
+                <Mcq data=anonymity_votes_evm/>
+
+                <Mcq data=one_time_programmable_memory/>
+
+                <Mcq data=one_time_progammable_evm/>
             </div>
         </div>
     }
