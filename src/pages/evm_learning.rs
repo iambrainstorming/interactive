@@ -121,6 +121,29 @@ pub fn EvmLearning() -> impl IntoView {
             context: r#"EVMs are reused multiple times in elections, and the votes are stored in volatile memory rather than OTP memory. This makes the memory potentially vulnerable to manipulation or tampering. Additionally, there is limited transparency about the origins of the microcontrollers used in EVMs. Information regarding their manufacture is not disclosed, even under the Right to Information (RTI) Act. The companies Bharat Electronics Limited (BEL) and Electronics Corporation of India Limited (ECIL) only assemble these devices.<br/> <br/> BEL had shared this information under RTI in May 2019. The microchips from our EVMs are supplied by NXP. But the more crucial RTI revelation was this, while the [Election Commission has always claimed that the EVM microchip is one-time programmable only](https://www.youtube.com/watch?v=LDrhK7TIdDo), experts went on to the NXP website and found that its microchips have FLASH memory which are not just one time programmable. Meaning, if accessed, then can be re-programmed opening the EVM to manipulation."#
                 .to_string(),
         };
+    let paper_obsolete = McqData {
+            question: "Why is using paper ballots not an obsolete technology?".to_string(),
+            correct_answer: "All of the above".to_string(),
+            options: vec![
+                "It decreases the cost of the voting process because paper is much cheaper than EVMs.".to_string(),
+                "With paper ballots, it is easier to maintain security due to the simplicity of the process, which is easily understood by everyone, whereas EVMs are complicated technologies with opaque and intricate processes.".to_string(),
+                "Automation of paper ballot counting can be achieved using current advancements in machine learning algorithms or AI. This can be implemented transparently through an open-source program that anyone can audit.".to_string(),
+            ],
+            context: r#""#
+                .to_string(),
+        };
+    let paper_ballot_booth_capturing = McqData {
+            question: "How can we make ballot boxes resistant to booth capturing and ballot stuffing?".to_string(),
+            correct_answer: "All of the Above".to_string(),
+            options: vec![
+                "Use of robotic secure robotic ballot boxes that open and close at specific intervals with the press of a button by polling officers. ".to_string(),
+                "A robotic ballot box can include a serial number cutter, which removes the serial number from the ballot paper. This is provided to the polling officer to prevent multiple ballot insertions or ballot stuffing while maintaining voter anonymity.".to_string(),
+                "The time delay for starting the counting process needs to be reduced and can be initiated the day after polling. ".to_string(),
+                "Ballot box surveillance by people and stakeholder through CCTV cameras and mobile phone cameras.".to_string(),
+            ],
+            context: r#"Booth capturing, also known as booth looting, is electoral fraud in which party loyalists or hired criminals "capture" a polling booth and vote on behalf of legitimate voters to ensure a particular candidate's victory. One argument is that Electronic Voting Machines (EVMs) help decrease booth capturing by enabling a five-minute delay in voting process, polling officer can also press a close button to deactivate the EVM. However, this measure doesn't entirely prevent booth capturing. Examples of booth capturing date back to the 1990s, but with the advancement of media, surveillance technology and redundant camera based mobile phones, it has become increasingly difficult to conceal such activities. Since booth capturing is a criminal offense, re-elections can be conducted in places where it occurs.<br/><br/>Regarding the time delay, we can now implement secure robotic ballot boxes that open and close at specific intervals with the press of a button by polling officers. The slit or hole can be thin enough so that a single ballot can enter. A robotic ballot box can include a serial number cutter, which removes the serial number from the ballot paper. This is provided to the polling officer to prevent multiple ballot insertions or ballot stuffing while maintaining voter anonymity. It is a simple machine. Such a device will be much cheaper than an EVM assembly. While booth capturing can be detected, it remains challenging to ascertain what the EVM software is doing in the background.<br/><br/>The time delay for starting the counting process needs to be reduced and can be initiated the day after polling. This minimizes the need for prolonged ballot box surveillance, reduces surveillance resources, and makes ballot box replacement by criminals significantly more difficult."#
+                .to_string(),
+        };
 
     view! {
         <div>
@@ -152,6 +175,10 @@ pub fn EvmLearning() -> impl IntoView {
                 <Mcq data=one_time_programmable_memory/>
 
                 <Mcq data=one_time_progammable_evm/>
+
+                <Mcq data=paper_obsolete/>
+
+                <Mcq data=paper_ballot_booth_capturing/>
             </div>
         </div>
     }
