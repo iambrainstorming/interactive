@@ -145,6 +145,18 @@ pub fn EvmLearning() -> impl IntoView {
                 .to_string(),
         };
 
+    let enigma_stragey = McqData {
+            question: "If EVMs are manipulated, how can the opposition win in these states? Explain the enigma strategy. Why is hacking all EVMs not a good idea?".to_string(),
+            correct_answer: "By leaving room for some opposition victories, the public's suspicion is mitigated, and the system's legitimacy remains intact in the eyes of many.".to_string(),
+            options: vec![
+                "To show partiality and establish the ruling party's dominance by winning all the states outright.".to_string(),
+                "To strategically blame the opposition for any irregularities in the election process.".to_string(),
+                "To completely avoid manipulating the EVMs to ensure a fair election process.".to_string(),
+            ],
+            context: r#"The Imitation Game Movie and Its Relevance to EVM Concerns<br/><br/>The Imitation Game, a movie based on true events, depicts the incredible story of Alan Turing and his team at Bletchley Park during World War II. They succeeded in breaking the Nazi Enigma code, a cryptographic system thought to be unbreakable. However, their victory brought an unexpected challenge: they couldn’t use the decoded information to stop all enemy attacks. Doing so would alert the Germans that their code had been cracked, rendering the entire effort futile. To maintain secrecy, Turing's team had to make calculated decisions, allowing some attacks to occur to ensure the enemy didn’t suspect their encryption system had been compromised. As a result, while 70% of Allied ships were saved through strategic interventions, others were left to their fate to protect the greater mission—winning the war.<br/><br/>Strategic Manipulation: The Plausible EVM Tactic<br/><br/>In a method strikingly similar to the Enigma strategy, the government may not be hacking EVM results across the board. Instead, they could be selectively targeting key states and constituencies with a larger number of seats while leaving a few smaller states or constituencies untouched. This calculated approach ensures plausible deniability, as it allows them to argue, "If EVMs are manipulated, how can the opposition win in these states?" By leaving room for some opposition victories, the public's suspicion is mitigated, and the system's legitimacy remains intact in the eyes of many. This selective interference could effectively tilt the balance of power while maintaining the illusion of fairness in the electoral process. Such a strategy, if true, would pose a grave threat to democracy by undermining its foundational principle of free and fair elections.<br/><br/>Vulnerabilities in Outdated EVM Technology<br/><br/>Technology has advanced significantly in recent decades, yet EVM technology has remained largely unchanged since the 1990s, without meaningful updates. Easier and more robust hacking tools, which were not available a decade ago, might now exist to compromise EVMs. Without public scrutiny and accessibility of EVMs to independent hackers, the government holds enormous power to exploit potential vulnerabilities for hacking purposes."#
+                .to_string(),
+        };
+
     view! {
         <div>
             <Nav/>
@@ -179,6 +191,8 @@ pub fn EvmLearning() -> impl IntoView {
                 <Mcq data=paper_obsolete/>
 
                 <Mcq data=paper_ballot_booth_capturing/>
+
+                 <Mcq data=enigma_stragey/>
             </div>
         </div>
     }
