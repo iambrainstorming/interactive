@@ -89,7 +89,7 @@ pub fn Nav() -> impl IntoView {
                                     data-dropdown-toggle="dropdownNavbar"
                                     class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
                                 >
-                                    "Dropdown"
+                                    "Mental Health Dropdown"
                                     <svg
                                         class="w-2.5 h-2.5 ms-2.5"
                                         aria-hidden="true"
@@ -139,10 +139,19 @@ pub fn Nav() -> impl IntoView {
                                     >
                                         <li>
                                             <a
-                                                href="#"
+                                                href="/anxiety_disorders"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                             >
-                                                "Dashboard"
+                                                "Anxiety Disorders"
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="/causes_anxiety"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >
+                                                "Causes of Anxiety Disorders"
                                             </a>
                                         </li>
                                         <li aria-labelledby="dropdownNavbarLink">

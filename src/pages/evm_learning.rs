@@ -192,7 +192,7 @@ pub fn EvmLearning() -> impl IntoView {
 
                 <Mcq data=paper_ballot_booth_capturing/>
 
-                 <Mcq data=enigma_stragey/>
+                <Mcq data=enigma_stragey/>
             </div>
         </div>
     }
