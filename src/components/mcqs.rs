@@ -26,9 +26,10 @@ pub fn Mcq(data: McqData) -> impl IntoView {
                 <section class="bg-white dark:bg-slate-800 py-12 rounded">
                     <div class="px-4">
                         <div class="flex flex-col items-left">
-                            <h1 class="text-4xl font-bold text-gray-800 mb-4 text-2xl dark:text-white">
-                                {question}
-                            </h1>
+                            <h1
+                                inner_html=parse_text_to_html(&question)
+                                class="text-1xl font-bold text-gray-800 mb-4  dark:text-white"
+                            ></h1>
 
                             <p>
                                 <ul class="text-gray-600 mb-8 text-lg dark:text-white">
@@ -68,10 +69,10 @@ pub fn Mcq(data: McqData) -> impl IntoView {
                                             view! {
                                                 <div>
                                                     {if is_correct {
-                                                        view! { <h3 class="btn btn-success">"Correct!"</h3> }
+                                                        view! { <h3 class="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">"Correct!"</h3> }
                                                             .into_any()
                                                     } else {
-                                                        view! { <h3 class="btn btn-error">"Wrong Answer!"</h3> }
+                                                        view! { <h3 class="bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600">"Wrong Answer!"</h3> }
                                                             .into_any()
                                                     }}
                                                     <p>

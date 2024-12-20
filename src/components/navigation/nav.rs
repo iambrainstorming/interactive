@@ -140,7 +140,7 @@ pub fn Nav() -> impl IntoView {
                                         <li>
                                             <a
                                                 href="/anxiety_disorders"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                                class="block px-4 py-2  bg-hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                             >
                                                 "Anxiety Disorders"
                                             </a>
@@ -152,6 +152,15 @@ pub fn Nav() -> impl IntoView {
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                             >
                                                 "Causes of Anxiety Disorders"
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a
+                                                href="/relaxation"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >
+                                                "Relaxation Technique"
                                             </a>
                                         </li>
                                         <li aria-labelledby="dropdownNavbarLink">

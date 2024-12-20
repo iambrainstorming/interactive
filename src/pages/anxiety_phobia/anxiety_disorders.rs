@@ -24,7 +24,7 @@ pub fn AnxietyDisorders() -> impl IntoView {
                 "Fearing failing an exam".to_string(),
                 "Fearing being rejected by someone you want to please".to_string(),
             ],
-            context: r#"Anxiety is characterized by a vague, distant, or unrecognized danger, and a fear of "losing control" of oneself or some situation. Options A, B, and C are examples of fear, which is directed towards a concrete external object or situation, whereas option D is an example of anxiety, which is a more internal and vague fear."#
+            context: r#"Anxiety is characterized by a vague, distant, or unrecognized danger, and a fear of "losing control" of oneself or some situation. Fear for not meeting a deadline or failing an exam, are examples of fear, which is directed towards a concrete external object or situation, whereas fearing something bad will happen and you will lose control of yourself is an example of anxiety, which is a more internal and vague fear."#
                 .to_string(),
         };
     let affect_of_anxiety = McqData {

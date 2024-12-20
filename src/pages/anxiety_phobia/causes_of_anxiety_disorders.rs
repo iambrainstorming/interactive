@@ -9,9 +9,9 @@ pub fn CausesOfAnxietyDisorders() -> impl IntoView {
             options: vec![
                 "relaxation".to_string(),
                 "exercise".to_string(),
-                "changing self-​talk and mistaken beliefs".to_string(),
+                "changing self-talk and mistaken beliefs".to_string(),
             ],
-            context: r#"The various strategies for overcoming anxiety disorders presented in this workbook—such as relaxation, exercise, desensitization, changing self-​talk and mistaken beliefs, or dealing with feelings —do not depend on a knowledge of underlying causes to be effective. Whether you are dealing with panic attacks, social phobia, generalized anxiety, or obsessive-compulsive disorder, recognize that there is no one cause which, if removed, would eliminate the problem."#
+            context: r#"The various strategies for overcoming anxiety disorders presented in this workbook—such as relaxation, exercise, desensitization, changing self-talk and mistaken beliefs, or dealing with feelings —do not depend on a knowledge of underlying causes to be effective. Whether you are dealing with panic attacks, social phobia, generalized anxiety, or obsessive-compulsive disorder, recognize that there is no one cause which, if removed, would eliminate the problem."#
                 .to_string(),
         };
 
@@ -27,7 +27,7 @@ pub fn CausesOfAnxietyDisorders() -> impl IntoView {
                 "your ability to express feelings".to_string()
 
             ],
-            context: r#"Anxiety problems are brought about by a variety of causes operating on numerous different levels: heredity, biology, family ​background and upbringing, conditioning, recent stressors, your self-talk and personal belief - system, your ability to express feelings, and so on"#
+            context: r#"Anxiety problems are brought about by a variety of causes operating on numerous different levels: heredity, biology, family background and upbringing, conditioning, recent stressors, your self-talk and personal belief - system, your ability to express feelings, and so on"#
                 .to_string(),
         };
 

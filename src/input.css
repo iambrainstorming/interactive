@@ -12,9 +12,5 @@ h3 {
     @apply text-lg;
 }
 
-a {
-    @apply mix-blend-color-burnblue;
-}
-
 @tailwind components;
 @tailwind utilities;
