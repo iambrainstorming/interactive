@@ -26,10 +26,10 @@ pub fn Mcq(data: McqData) -> impl IntoView {
                 <section class="bg-white dark:bg-slate-800 py-12 rounded">
                     <div class="px-4">
                         <div class="flex flex-col items-left">
-                            <h1
+                            <p
                                 inner_html=parse_text_to_html(&question)
-                                class="text-1xl font-bold text-gray-800 mb-4  dark:text-white"
-                            ></h1>
+                                class="text-gray-800 mb-4 text-lg  dark:text-white"
+                            ></p>
 
                             <p>
                                 <ul class="text-gray-600 mb-8 text-lg dark:text-white">
