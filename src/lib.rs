@@ -12,6 +12,7 @@ mod pages;
 use crate::pages::anxiety_phobia::anxiety_disorders::AnxietyDisorders;
 use crate::pages::anxiety_phobia::causes_of_anxiety_disorders::CausesOfAnxietyDisorders;
 use crate::pages::anxiety_phobia::relaxation::Relaxation;
+use crate::pages::civil_disobedience::theory_application::TheoryApplication;
 use crate::pages::evm_learning::EvmLearning;
 use crate::pages::home::Home;
 use crate::pages::not_found::NotFound;
@@ -61,6 +62,7 @@ pub fn App() -> impl IntoView {
                 <Route path=path!("anxiety_disorders") view=AnxietyDisorders/>
                 <Route path=path!("causes_anxiety") view=CausesOfAnxietyDisorders/>
                 <Route path=path!("relaxation") view=Relaxation />
+                 <Route path=path!("theory-application") view=TheoryApplication />
             </Routes>
         </Router>
     }

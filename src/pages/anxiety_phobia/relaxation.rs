@@ -102,13 +102,14 @@ pub fn Relaxation() -> impl IntoView {
     };
 
     let procrastination = McqData {
-            question: "What is one of the reasons for procrastination? Procrastination means putting off or delaying or defering an action to a later time <br/>A) Lack of motivation, which can be caused by a variety of factors, including a lack of interest in the task, inadequate rewards or recognition, or a general feeling of burnout and exhaustion, leading to a decrease in productivity and a tendency to put off tasks until the last minute.<br/> B) Perfectionism, which involves setting unrealistically high standards for oneself and fearing that one's work will not meet those standards, leading to a delay or avoidance of the task altogether.<br/>C) Poor time management, which can result from a lack of planning, prioritization, and organization, causing individuals to misallocate their time and energy, leading to a backlog of tasks and a sense of overwhelm, ultimately resulting in procrastination.<br/>D) Insufficient resources, such as a lack of access to necessary tools, equipment, or information, which can hinder an individual's ability to complete a task, leading to frustration and a tendency to put off the task until the necessary resources become available.".to_string(),
-            correct_answer: "B) and C)".to_string(),
+            question: "What is the the real reason you procrastinate? Procrastination as a type of delay that is voluntary, unnecessary, and involves an important task that you intended to do.".to_string(),
+            correct_answer: "Perfectionism, which involves setting unrealistically high standards for oneself and fearing that one's work will not meet those standards, leading to a delay or avoidance of the task altogether. The negative emotions toward the task, such as how hard or boring it seems, make you procrastinate.".to_string(),
             options: vec![
-                "B) and D)".to_string(),
-                "A) and C)".to_string(),
+                "Lack of motivation, which can be caused by a variety of factors, including a lack of interest in the task, inadequate rewards or recognition, or a general feeling of burnout and exhaustion, leading to a decrease in productivity and a tendency to put off tasks until the last minute.".to_string(),
+                "Poor time management, which can result from a lack of planning, prioritization, and organization, causing individuals to misallocate their time and energy, leading to a backlog of tasks and a sense of overwhelm, ultimately resulting in procrastination".to_string(),
+                "Insufficient resources, such as a lack of access to necessary tools, equipment, or information, which can hinder an individual's ability to complete a task, leading to frustration and a tendency to put off the task until the necessary resources become available.".to_string(),
             ],
-            context: r#""#
+            context: r#"<h3>Here's the real reason you procrastinate | Fuschia Sirois</p> Many believe that laziness, poor time management, or disorganisation are the reasons why people procrastinate. In this talk, Fuschia will explore the science behind why people procrastinate to reveal the “real” reasons why people unnecessarily delay, the toll it can take, and what you can do to reduce procrastination. <br/> <br/> <iframe width="560" height="315" src="https://www.youtube.com/embed/xTEPNxx0MsA?si=RMwb7sXipEc79ZdK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"#
                 .to_string(),
         };
 
@@ -150,9 +151,10 @@ pub fn Relaxation() -> impl IntoView {
                <iframe width="560" height="315" src="https://www.youtube.com/embed/KwUBCKs35bU?si=gzrGb6Nj_1Ju3ecF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                  <br/>
                  <br/>
+                  <Mcq data=procrastination/>
                 <Mcq data=downtime_time_management/>
                  <Mcq data=time_management/>
-                 <Mcq data=procrastination/>
+
                 <br/>
 
             </div>

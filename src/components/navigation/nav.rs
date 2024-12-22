@@ -57,6 +57,8 @@ pub fn Nav() -> impl IntoView {
 fn navbar_items() -> impl IntoView {
     let (submenu_open, set_submenu_open) = signal(false);
 
+    let (disobedience_open, set_disobedience_open) = signal(false);
+
     view! {
         <>
             <a href="/" class="block py-2 px-4 text-gray-700 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">"Home"</a>
@@ -65,7 +67,7 @@ fn navbar_items() -> impl IntoView {
                     on:click=move |_| set_submenu_open.update(|n| *n = !*n)
                     class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
-                    "Mental Health Dropdown"
+                    "Mental Health"
                     <svg class="inline w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path
                             stroke="currentColor"
@@ -88,6 +90,35 @@ fn navbar_items() -> impl IntoView {
                     <a href="/anxiety_disorders" class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">"Anxiety Disorders"</a>
                     <a href="/causes_anxiety" class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">"Causes of Anxiety Disorders"</a>
                     <a href="/relaxation" class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">"Relaxation Technique"</a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <button
+                    on:click=move |_| set_disobedience_open.update(|n| *n = !*n)
+                    class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                >
+                    "Non-Violent Struggle"
+                    <svg class="inline w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 1l4 4 4-4"
+                        ></path>
+                    </svg>
+                </button>
+                <div
+                    class=move || {
+                        if disobedience_open() {
+                            "relative w-full mt-2 space-y-1 bg-white rounded shadow dark:bg-gray-800 lg:absolute lg:w-auto"
+                        } else {
+                            "hidden"
+                        }
+                    }
+                >
+                    <a href="/theory-application" class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">"Theory and application"</a>
                 </div>
             </div>
             <a href="/evm" class="block py-2 px-4 text-gray-700 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">"EVM Quiz"</a>
