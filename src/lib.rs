@@ -11,6 +11,7 @@ mod pages;
 // Top-Level pages
 use crate::pages::anxiety_phobia::anxiety_disorders::AnxietyDisorders;
 use crate::pages::anxiety_phobia::causes_of_anxiety_disorders::CausesOfAnxietyDisorders;
+use crate::pages::anxiety_phobia::growth_mindset::GrowthMindset;
 use crate::pages::anxiety_phobia::relaxation::Relaxation;
 use crate::pages::civil_disobedience::theory_application::TheoryApplication;
 use crate::pages::evm_learning::EvmLearning;
@@ -61,8 +62,9 @@ pub fn App() -> impl IntoView {
                 <Route path=path!("evm") view=EvmLearning/>
                 <Route path=path!("anxiety_disorders") view=AnxietyDisorders/>
                 <Route path=path!("causes_anxiety") view=CausesOfAnxietyDisorders/>
-                <Route path=path!("relaxation") view=Relaxation />
-                 <Route path=path!("theory-application") view=TheoryApplication />
+                <Route path=path!("relaxation") view=Relaxation/>
+                <Route path=path!("theory-application") view=TheoryApplication/>
+                <Route path=path!("growth-mindset") view=GrowthMindset/>
             </Routes>
         </Router>
     }

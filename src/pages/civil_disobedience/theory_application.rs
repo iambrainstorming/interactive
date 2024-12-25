@@ -131,22 +131,23 @@ pub fn TheoryApplication() -> impl IntoView {
         <div>
             <Nav/>
             <div class="container mx-auto">
-            <Mcq data=what_is_civil_disobedience/>
-             <Mcq data=why_civil/>
-              <Mcq data=first_step/>
-             <Mcq data=vision_of_tomorrow/>
-             <Mcq data=role_vision/>
-             <Mcq data=widely_shared/>
-             <Mcq data=realist_goals />
-             <Mcq data=understanding_different_groups />
-             <Mcq data=monolithic_model />
-             <Mcq data=pluralistic_model />
-             <Mcq data=sources_of_power />
-             <br/><br/>
-             <h2 class="text-xl dark:text-white">"Obedience"</h2>
-             <br/>
-             <Mcq data=heart_of_political_power />
-             <Mcq data=obey />
+                <Mcq data=what_is_civil_disobedience/>
+                <Mcq data=why_civil/>
+                <Mcq data=first_step/>
+                <Mcq data=vision_of_tomorrow/>
+                <Mcq data=role_vision/>
+                <Mcq data=widely_shared/>
+                <Mcq data=realist_goals/>
+                <Mcq data=understanding_different_groups/>
+                <Mcq data=monolithic_model/>
+                <Mcq data=pluralistic_model/>
+                <Mcq data=sources_of_power/>
+                <br/>
+                <br/>
+                <h2 class="text-xl dark:text-white">"Obedience"</h2>
+                <br/>
+                <Mcq data=heart_of_political_power/>
+                <Mcq data=obey/>
             </div>
 
         </div>

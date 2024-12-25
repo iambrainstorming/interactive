@@ -53,6 +53,18 @@ pub fn EvmLearning() -> impl IntoView {
         context: r#""#.to_string(),
     };
 
+    let propriety_software = McqData {
+            question: "Why Proprietary Software Is Often Malware".to_string(),
+            correct_answer: "All of These".to_string(),
+            options: vec![
+                "Back door:  any feature of a program that enables someone who is not supposed to be in control of the computer where it is installed to send it commands.".to_string(),
+                "Surveillance: A common malicious functionality is to snoop on or track the user.".to_string(),
+                "Insecurity: the possibility of a cyber-criminal illegally accessing or manipulating computer systems, data, or applications, compromising their integrity, authentication, and availability".to_string(),
+            ],
+            context: r#"<a href="https://www.gnu.org/proprietary/proprietary.html">Proprietary Software Is Often Malware</a> <br/>You can find many pieces of evidence in the above link on how proprietary software is used to abuse users. <br/> Proprietary software, also called nonfree software, means software that doesn't respect users' freedom and community. A proprietary program puts its developer or owner in a position of power over its users. This power is in itself an injustice. This doesn't imply that free software is immune to bugs or insecurities. The difference between free and proprietary software in this respect is the handling of the bugs: free software users are able to study the program and/or fix the bugs they find, often in communities as they are able to share the program, while proprietary program users are forced to rely on the program's developer for fixes."#
+                .to_string(),
+        };
+
     let security_required_evm = McqData {
         question: "How many days of security does an EVM require?".to_string(),
         correct_answer: "All the time".to_string(),
@@ -157,6 +169,19 @@ pub fn EvmLearning() -> impl IntoView {
                 .to_string(),
         };
 
+    let dynamic_public_environment = McqData {
+            question: "One argument made is that the EVM can be hacked in a static lab setting but not in a public setting. Can you explain why EVM manipulation could still occur in a dynamic public environment?".to_string(),
+            correct_answer: "All of the Above".to_string(),
+            options: vec![
+                "All hardware and software are proprietary, no matter how much surveillance is done on a public setting, you can't know what's happening inside the EVM box.".to_string(),
+                "In case of paper ballot, your votes don't disappear in the ballot box; that goes beyond the laws of physics. So, surveillance can solve the issue of malpractice. ".to_string(),
+                "Electronic Voting Machines (EVMs)  supports read, write, and delete functions, your votes can disappear without trace, and it's hard to prove it.".to_string(),
+                "Booth-wise data—including the location area covered by polling booths, vote counts from each EVM, the votes each candidate received on each EVM and booth-wise turnout figures are not made available, so the public can't independently analyse and identify potential discrepancies or irregularities. While Lok Sabha 2024 election, cumulative turn out data was made available, and discrepancies were found in almost all constituencies.".to_string(),
+            ],
+            context: r#""#
+                .to_string(),
+        };
+
     view! {
         <div>
             <Nav/>
@@ -171,6 +196,8 @@ pub fn EvmLearning() -> impl IntoView {
                 <Mcq data=secrecy_software/>
 
                 <Mcq data=open_source_evm/>
+
+                <Mcq data=propriety_software/>
 
                 <Mcq data=security_required_evm/>
 
@@ -193,6 +220,8 @@ pub fn EvmLearning() -> impl IntoView {
                 <Mcq data=paper_ballot_booth_capturing/>
 
                 <Mcq data=enigma_stragey/>
+
+                <Mcq data=dynamic_public_environment/>
             </div>
         </div>
     }

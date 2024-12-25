@@ -87,3 +87,27 @@ let question_data = McqData {
             .to_string(),
     };
 ```
+
+
+```rust
+let question_data = McqDataMultipleSelect {
+        question: "".to_string(),
+        correct_answer: vec!["".to_string(),"".to_string()],
+        options: vec![
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
+        ],
+        context: r#""#
+            .to_string(),
+    };
+```
+
+```rust
+use crate::components::navigation::nav::Nav;
+use crate::components::{mcq_struct::McqData, mcqs::Mcq};
+use crate::components::{
+    mcq_struct::McqDataMultipleSelect, mcqs_multiple_select::McqMultipleSelect,
+};
+use leptos::prelude::*;
+```

@@ -25,16 +25,18 @@ pub fn Home() -> impl IntoView {
             }
         }>
             <Nav/>
-        <div class="container mx-auto bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-            <div class="p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-              <h1 class="text-3xl font-bold text-center mb-4">"Welcome to Interactive Learning"</h1>
-              <p class="text-lg text-center">
-                "Explore a range of topics, including mental health awareness, the principles of nonviolent struggle,
-                and the workings of electronic voting machines, among others. Each course is designed to provide insightful
-                knowledge and practical understanding to empower you in these areas. Simply use the navigation menu to browse
-                and access the courses that interest you, and start your journey of learning today!"
-              </p>
-            </div>
+            <div class="container mx-auto bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+                <div class="p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+                    <h1 class="text-3xl font-bold text-center mb-4">
+                        "Welcome to Interactive Learning"
+                    </h1>
+                    <p class="text-lg text-center">
+                        "Explore a range of topics, including mental health awareness, the principles of nonviolent struggle,
+                        and the workings of electronic voting machines, among others. Each course is designed to provide insightful
+                        knowledge and practical understanding to empower you in these areas. Simply use the navigation menu to browse
+                        and access the courses that interest you, and start your journey of learning today!"
+                    </p>
+                </div>
             </div>
         </ErrorBoundary>
     }

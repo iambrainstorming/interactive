@@ -123,11 +123,20 @@ pub fn Relaxation() -> impl IntoView {
                 <Mcq data=physiological_changes_decreases/>
                 <Mcq data=physiological_changes_increase/>
                 <Mcq data=benefits_deep_relaxtion/>
-                 <Mcq data=immediate_benefits/>
+                <Mcq data=immediate_benefits/>
                 <br/>
                 <br/>
                 <h2 class="text-xl dark:text-white">"Breathing Exercises"</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cvflhGzINJ4?si=y-xNJQn9xFw3QQoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/cvflhGzINJ4?si=y-xNJQn9xFw3QQoA"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
                 <br/>
                 <h2 class="text-xl dark:text-white">"Progressive Muscle Relaxation"</h2>
                 <iframe
@@ -142,18 +151,45 @@ pub fn Relaxation() -> impl IntoView {
                 ></iframe>
                 <br/>
                 <h2 class="text-xl dark:text-white">"Guided Imagery Exercise"</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/g4iHKY2p5bY?si=14hGJKYnZCcn_J4x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/g4iHKY2p5bY?si=14hGJKYnZCcn_J4x"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
                 <br/>
                 <h2 class="text-xl dark:text-white">"Grounding Exercise Outdoors"</h2>
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/3HZ7JkMJceA?si=fheCUc9z8sJzyxV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3HZ7JkMJceA?si=fheCUc9z8sJzyxV0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
                 <br/>
-               <h2 class="text-xl dark:text-white">"Grounding Exercise Indoors"</h2>
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/KwUBCKs35bU?si=gzrGb6Nj_1Ju3ecF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 <br/>
-                 <br/>
-                  <Mcq data=procrastination/>
+                <h2 class="text-xl dark:text-white">"Grounding Exercise Indoors"</h2>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/KwUBCKs35bU?si=gzrGb6Nj_1Ju3ecF"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+                <br/>
+                <br/>
+                <Mcq data=procrastination/>
                 <Mcq data=downtime_time_management/>
-                 <Mcq data=time_management/>
+                <Mcq data=time_management/>
 
                 <br/>
 
