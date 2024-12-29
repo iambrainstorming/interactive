@@ -124,14 +124,15 @@ pub fn McqMultipleSelect(data: McqDataMultipleSelect) -> impl IntoView {
                                                             .into_any()
                                                     }}
                                                     <p>
-                                                        {"You selected: "} <strong>{selected.join(", ")}</strong>
+                                                        {"You selected: "}
+                                                        <strong inner_html=selected.join("<br/>")></strong>
                                                     </p>
                                                     {if !is_correct {
                                                         Either::Left(
                                                             view! {
                                                                 <p>
-                                                                    "Correct answers: "
-                                                                    <strong>{correct_answers.join(", ")}</strong>
+                                                                    "Correct answers: " <br/>
+                                                                    <strong inner_html=correct_answers.join("<br/>")></strong>
                                                                 </p>
                                                             },
                                                         )

@@ -4,7 +4,7 @@ Learn interactively
 
 ```
 cargo install --locked trunk
-cd shivarthu-client
+cd interactive
 trunk serve
 ```
 
@@ -16,13 +16,6 @@ npx tailwindcss -i ./src/input.css -o ./css/output.css --watch
 
 ```
 
-
-## daisyUI
-
-```bash
-npm i -D daisyui@latest
-npm i -D flowbite
-```
 
 ## Leptos format
 
@@ -92,7 +85,7 @@ let question_data = McqData {
 ```rust
 let question_data = McqDataMultipleSelect {
         question: "".to_string(),
-        correct_answer: vec!["".to_string(),"".to_string()],
+        correct_answers: vec!["".to_string(),"".to_string()],
         options: vec![
             "".to_string(),
             "".to_string(),

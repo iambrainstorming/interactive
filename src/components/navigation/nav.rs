@@ -105,6 +105,18 @@ fn navbar_items() -> impl IntoView {
                         "Relaxation Technique"
                     </a>
                     <a
+                        href="/self-talk"
+                        class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >
+                        "Self Talk"
+                    </a>
+                    <a
+                        href="/assertive"
+                        class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >
+                        "Being Assertive"
+                    </a>
+                    <a
                         href="/growth-mindset"
                         class="block py-2 w-full px-4 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >

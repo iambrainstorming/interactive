@@ -1,4 +1,7 @@
 use crate::components::{mcq_struct::McqData, mcqs::Mcq, navigation::nav::Nav};
+use crate::components::{
+    mcq_struct::McqDataMultipleSelect, mcqs_multiple_select::McqMultipleSelect,
+};
 use leptos::prelude::*;
 
 #[component]
@@ -80,6 +83,18 @@ pub fn Relaxation() -> impl IntoView {
                 .to_string(),
         };
 
+    let exercise_benefits = McqDataMultipleSelect {
+            question: "How regular exercise changes your brain biology and protects your health? <br/> Select all that apply".to_string(),
+            correct_answers: vec!["A molecule called brain-derived neurotrophic factor helps the brain produce neurons, or brain cells. A variety of aerobic and high-intensity interval training exercises significantly increase BDNF levels.".to_string(),"Moderate exercise also seems to have anti-inflammatory effects, regulating the immune system and excessive inflammation".to_string(), "Exercise improves memory function, cognitive performance and academic achievement".to_string(), "Exercise improves clinical symptoms of anxiety and depression".to_string(), "Exercise controls weight".to_string(), "Regular exercise helps prevent or manage many health problems and concerns, including Stroke, High blood pressure, Type 2 diabetes".to_string(), "Daily exercise helps to improve your lungs capacity, in other words, the maximum amount of oxygen your body can use. Also, exercise increases blood flow to your lungs, promoting blood flow to the heart which pumps oxygen throughout your body".to_string()],
+            options: vec![
+                "Exercise guarantees 100% immunity against common infections.".to_string(),
+                "Exercise increases the rate at which you grow taller as an adult".to_string(),
+                "Engaging in daily exercise instantly enhances your IQ by several points".to_string(),
+            ],
+            context: r#"Brain biology and growth <br/><br/>Working out regularly really does change the brain biology, and it is not just “go walk and you will just feel better.” Regular exercise, especially cardio, does change the brain. Contrary to what some may think, the brain is a very plastic organ. Not only are new neuronal connections formed every day, but also new cells are generated in important areas of the brain. One key area is the hippocampus, which is involved in learning and memory and regulating negative emotions. <br/> A molecule called brain-derived neurotrophic factor helps the brain produce neurons, or brain cells. A variety of aerobic and high-intensity interval training exercises significantly increase BDNF levels. There is evidence from animal research that these changes are at epigenetic level, which means these behaviors affect how genes are expressed, leading to changes in the neuronal connections and function. <br/> <a href="https://bigthink.com/health/neurobiology-of-exercise/">How exercise changes your brain biology and protects your mental health </a> <br/> <iframe width="560" height="315" src="https://www.youtube.com/embed/BHY0FxzoKZE?si=1nip5NnGTJgAkWD1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"#
+                .to_string(),
+        };
+
     let downtime_time_management = McqData {
             question: "Match the words with their definitions <br/><br/>1) Downtime 2)Rest time 3)Recreation time 4)Relationship time<br/><br/> A) Is time when you put aside your private goals and responsibilities in order to enjoy being with another person—or, in some cases, with several people. The focus of relationship time is to honor your relationship with your partner, children, extended family members, friends, pets, and so on, and forget about your individual pursuits for a while. If you have a family,- relationship time needs to be allocated equitably between time alone with your spouse, time alone with your children, and time when the entire family gets together. If you’re single with a partner, time needs to be judiciously allocated between time with your partner and time with friends.<br/> <br/>B) Is time when you set aside all activities and just allow yourself to be. You stop action and let yourself fully rest. Rest time might involve lying on the couch and doing nothing, quietly meditating, sitting in your recliner and listening to peaceful music, soaking in a Jacuzzi, or taking a catnap in the middle of the workday. The key to rest time is that it is fundamentally passive—you allow yourself to stop doing and accomplishing and just be. Contemporary society encourages each of us to be productive and always accomplish more and more every moment of the waking day. Rest time is a needed counterpoint. When you’re under stress, one hour of rest time per day, separate from the time you sleep, is optimal.<br/><br/>C) Involves engaging in activities that help to “re-create” you— that is, serve to replenish your energy. Recreation time brightens and uplifts your spirits. In essence, it is doing anything that you experience as fun or play. Examples of such activities might include puttering in the garden, reading a novel, seeing a special movie, going on a hike, playing soccer, taking a short trip, baking a loaf of bread, or fishing. Recreation time can be done during the workweek and is most important to have on your days off from work.<br/><br/> D)Time out from work or other responsibilities to give yourself an opportunity to rest and replenish your energy. Without periods of downtime, any stress you experience while dealing with work or other responsibilities tends to become cumulative. It keeps building without any remission. You may tend to keep pushing yourself until finally you drop from exhaustion or experience an aggravation of your anxiety or phobias. Sleep at night doesn’t really count as downtime. If you go to bed feeling stressed, you may sleep for eight hours and still wake up feeling tense, tired, and stressed. Downtime needs to be scheduled during the day, apart from sleep. Its primary purpose is simply to allow a break in the stress cycle—to ​prevent stress you’re experiencing from becoming cumulative.
 ".to_string(),
@@ -123,6 +138,7 @@ pub fn Relaxation() -> impl IntoView {
                 <Mcq data=physiological_changes_decreases/>
                 <Mcq data=physiological_changes_increase/>
                 <Mcq data=benefits_deep_relaxtion/>
+                <McqMultipleSelect data=exercise_benefits/>
                 <Mcq data=immediate_benefits/>
                 <br/>
                 <br/>
