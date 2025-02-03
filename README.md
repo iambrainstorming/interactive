@@ -104,3 +104,10 @@ use crate::components::{
 };
 use leptos::prelude::*;
 ```
+
+
+Fleek deploy:
+
+```
+fleek sites deploy
+```

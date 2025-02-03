@@ -83,6 +83,17 @@ pub fn Relaxation() -> impl IntoView {
                 .to_string(),
         };
 
+    let brain_activation = McqData {
+        question: "Which areas of the brain are switched on and off during meditation? <br/> Default mode network, the brain region involved in rumination and construction of thoughts about the past and future. <br/> Insula responsible for body awareness, among other things".to_string(),
+        correct_answer: "The default mode network becomes less active, while the insula becomes more active.".to_string(),
+        options: vec![
+            "The default mode network becomes more active, while the insula becomes less active.".to_string(),
+            "Both the default mode network and the insula become more active.".to_string(),
+            "Both the default mode network and the insula become less active.".to_string(),
+        ],
+        context: r#"Which areas of the brain are switched on and off during meditation?<br/> Matt Dixon, a research scholar in Stanford's psychology department, says meditation affects two main pathway changes in the brain. One is in the default mode network, the brain region involved in rumination and construction of thoughts about the past and future. (Hello, anxiety!) That network becomes less active in people who practice meditation. On the flip side, a part of the brain called the insula (responsible for body awareness, among other things) becomes more active in those who meditate, leading to increased awareness of their emotions and bodily sensations. “If you're doing it right, you're not thinking about yourself so much or judging yourself,” Dixon says. “You're becoming more into the present moment.“ <br/> [What Happens When You Meditate](https://stanfordmag.org/contents/what-happens-when-you-meditate)"#
+            .to_string(),
+    };
     let exercise_benefits = McqDataMultipleSelect {
             question: "How regular exercise changes your brain biology and protects your health? <br/> Select all that apply".to_string(),
             correct_answers: vec!["A molecule called brain-derived neurotrophic factor helps the brain produce neurons, or brain cells. A variety of aerobic and high-intensity interval training exercises significantly increase BDNF levels.".to_string(),"Moderate exercise also seems to have anti-inflammatory effects, regulating the immune system and excessive inflammation".to_string(), "Exercise improves memory function, cognitive performance and academic achievement".to_string(), "Exercise improves clinical symptoms of anxiety and depression".to_string(), "Exercise controls weight".to_string(), "Regular exercise helps prevent or manage many health problems and concerns, including Stroke, High blood pressure, Type 2 diabetes".to_string(), "Daily exercise helps to improve your lungs capacity, in other words, the maximum amount of oxygen your body can use. Also, exercise increases blood flow to your lungs, promoting blood flow to the heart which pumps oxygen throughout your body".to_string()],
@@ -138,6 +149,7 @@ pub fn Relaxation() -> impl IntoView {
                 <Mcq data=physiological_changes_decreases/>
                 <Mcq data=physiological_changes_increase/>
                 <Mcq data=benefits_deep_relaxtion/>
+                <Mcq data=brain_activation/>
                 <McqMultipleSelect data=exercise_benefits/>
                 <Mcq data=immediate_benefits/>
                 <br/>
